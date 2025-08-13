@@ -149,4 +149,153 @@
   .animate-star-movement-top {
     animation: star-movement-top linear infinite alternate;
   }
+  
+  /* Hero Futuristic Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-subtitle {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scan-line {
+    0% {
+      top: 0;
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes grid-glow {
+    0%, 100% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes bounce-arrow {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+  
+  .fade-in-subtitle {
+    animation: fade-in-subtitle 1s ease-out forwards;
+  }
+  
+  .glitch-text:hover {
+    animation: glitch 0.3s ease-in-out;
+  }
+  
+  .scan-line {
+    animation: scan-line 3s linear infinite;
+  }
+  
+  .futuristic-grid {
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-glow 4s ease-in-out infinite;
+  }
+  
+  .explore-btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    animation: fade-in 1s ease-out 2.2s forwards;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .explore-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateX(-50%) translateY(-2px);
+  }
+  
+  .explore-arrow {
+    display: inline-block;
+    animation: bounce-arrow 2s infinite;
+  }
+  
+  .arrow-svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .explore-btn:hover .arrow-svg {
+    transform: translateY(2px);
+  }
+  
+  .futuristic-image-frame {
+    opacity: 0;
+    animation: fade-in 1.5s ease-out 1s forwards;
+  }
 }

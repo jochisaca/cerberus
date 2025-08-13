@@ -4,6 +4,7 @@ import { Bell, Home as HomeIcon, HelpCircle, Settings, Shield, Mail, User, FileT
 import { ExpandableTabs } from "@/components/ui/expandable-tabs";
 import { StarBorder } from "@/components/ui/star-border";
 import AnimatedGradientBackground from "@/components/ui/animated-gradient-background";
+import HeroFuturistic from "@/components/ui/hero-futuristic";
 
 const tabs = [
   { title: "Dashboard", icon: HomeIcon },
@@ -23,7 +24,9 @@ export default function Home() {
         breathingRange={10}
         animationSpeed={0.015}
       />
-      <div className="container mx-auto py-16 relative z-10">
+      
+      {/* Navigation */}
+      <div className="container mx-auto py-8 relative z-50">
         <div className="flex justify-center">
           <StarBorder as="div" className="w-fit">
             <ExpandableTabs 
@@ -32,6 +35,11 @@ export default function Home() {
             />
           </StarBorder>
         </div>
+      </div>
+      
+      {/* Hero Section */}
+      <div className="relative z-10">
+        <HeroFuturistic />
       </div>
     </main>
   )
